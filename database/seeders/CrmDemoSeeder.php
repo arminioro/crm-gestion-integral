@@ -15,7 +15,7 @@ class CrmDemoSeeder extends Seeder
     {
         //
         // 1. Asesores
-        foreach (['Ana Rodríguez', 'Carlos Pérez', 'María González'] as $name) {
+        foreach (['Robers Arminio', 'Ana Rodríguez', 'Carlos Pérez', 'María González'] as $name) {
             DB::table('users_simple')->insert([
                 'name' => $name,
                 'email' => strtolower(str_replace(' ', '.', $name)) . '@crm.com',
@@ -27,7 +27,7 @@ class CrmDemoSeeder extends Seeder
         foreach (['Redes Sociales', 'Recomendación', 'Web', 'Evento', 'Otro'] as
             $nombre) {
             DB::table('origins')->insert([
-                'nombre' => $nombre,
+                'name' => $nombre,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
@@ -61,7 +61,7 @@ class CrmDemoSeeder extends Seeder
                     '0',
                     STR_PAD_LEFT
                 ),
-                'zona_geografica' => $zonas[$i % 5],
+                'zona geografica' => $zonas[$i % 5],
                 'user_id' => ($i % 3) + 1,
                 'origin_id' => ($i % 5) + 1,
                 'created_at' => now(),

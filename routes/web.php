@@ -9,9 +9,6 @@ Route::get('/', function () {
 
 Route::prefix('reportes')->name('reportes.')->group(function () {
     Route::get('/zonas', [ReportController::class, 'clientesPorZona'])->name('zonas');
-    Route::get('/interacciones', [
-        ReportController::class,
-        'interaccionesPorAsesor'
-    ])->name('interacciones');
+    Route::get('/interacciones', [ReportController::class, 'interaccionesPorAsesor'])->name('interacciones');
 });
 
